@@ -89,12 +89,13 @@ def fetch_and_save_reports(reports, queries):
 			total_records = len(data)
 			
 			save_csv_report(report, content, get_report_date(days=0), total_records)
+			# "start": start or "",
+			# "end": get_report_date(date_format="%H:%M:%S", days=0),
+			# removed start and end date
 
 			results.append({
 				"report": report_names.get(report),
 				"is_sucessful": True,
-				"start": start,
-				"end": get_report_date(date_format="%H:%M:%S", days=0),
 				"total_records": total_records,
 				"result": "CSV Created"
 			});
@@ -105,8 +106,6 @@ def fetch_and_save_reports(reports, queries):
 			results.append({
 				"report": report_names.get(report),
 				"is_sucessful": False,
-				"start": start or "",
-				"end": get_report_date(date_format="%H:%M:%S", days=0),
 				"total_records": total_records,
 				"result": "Error while creating CSV"
 			});
@@ -137,7 +136,7 @@ def create_directory(base_path, dir_name=None):
 
 def save_csv_report(report, content, report_date, total_records):
 	filename = filename_formats.get(report)
-	filename = filename.format(report_date=report_date, count=total_records or "")
+	filename = filename.format(report_date=report_date, count=total_records or "0")
 	create_directory(report_path, dir_name=report_date)
 	file_path = "{report_path}/{report_date}/{filename}".format(
 		report_path=report_path,

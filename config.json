@@ -1,0 +1,81 @@
+{
+	"db_config": {
+		"db": "activity_report",
+		"passwd": "password",
+		"user": "root",
+		"host": "localhost"
+	},
+	"recipients": [
+		"sharon.koshy@cequitysolutions.com",
+		"jagruti.sheth@cequitysolutions.com",
+		"seema.balani@cequitysolutions.com"
+	],
+	"cc": [
+		"gupteshwar@indictranstech.com",
+		"shraddha.r@indictranstech.com",
+		"nikhil.k@indictranstech.com"
+	],
+	"sender": "makarand.b@indictranstech.com",
+	"mail_subject": "[Cequity] Reports created",
+	"date_format": "%Y-%m-%d",
+	"filename_formats": {
+		"customer": "Customer_{report_date}_{count}.csv",
+		"customer_with_points": "Customer_with_points_{report_date}_{count}.csv",
+		"customer_with_txns": "Customer_with_transaction_{report_date}_{count}.csv",
+		"product_line_per_txn": "Product_line_per_transaction_{report_date}_{count}.csv",
+		"socialdata": "socialdata_{report_date}_{count}.csv",
+		"member_points": "member_points_weekly{report_date}_{count}.csv",
+		"return_transactions": "Return_transaction_{report_date}_{count}"
+	},
+	"daily_reports": [
+		"customer",
+		"socialdata",
+		"customer_with_txns",
+		"product_line_per_txn",
+		"customer_with_points",
+		"return_transactions"
+	],
+	"weekly_reports": ["member_points"],
+	"report_headers": {
+		"customer": [
+			"Store", "UID", "First Name", "Last Name", "eMail ID",
+			"Mobile Number", "Address", "Sex", "DOB", "DOA",
+			"Registered Date", "Registration Source", "Voucher", "Referred By"
+		],
+		"socialdata": [
+			"uid", "mobile", "mail", "firstname", "lastname", "media", "action", "points", "date"
+		],
+		"customer_with_txns": [
+			"Store", "UID", "First Name", "Last Name", "eMail ID", "Mobile Number",
+			"Order ID", "Order Total", "Product Count", "Order Date", "Order Status",
+			"Payment Method", "Points Earned", "Points Redeemed", "DOC NO", "Celio Customer id"
+		],
+		"product_line_per_txn": [
+			"DOC NO", "Cashier", "Store", "Order id", "Product", "Family", "Style", "UID", "Qty"
+		],
+		"customer_with_points": [
+			"Store", "UID", "First Name", "Last Name", "eMail ID",
+			"Mobile Number","Last LP", "Total LP", "Last SP", "Total SP"
+		],
+		"member_points": [
+			"uid", "Customer ID as per Celio", "Mobile", "Mail", "Firstname", "Lastname",
+			"Total Purchase Points", "Total Social Points", "Total Redeemed points"
+		],
+		"return_transactions": [
+			"Store", "UID", "First Name", "Last Name", "eMail ID", "Mobile Number", "Order Id",
+			"Order Total", "Product Count", "Order Date", "Order Status", "Payment Method", "Points Earned",
+			"Points Redeemed", "DOC NO", "Return Date"
+		]
+	},
+	"report_names": {
+		"customer": "Customer",
+		"customer_with_points": "Customer With Points",
+		"customer_with_txns": "Customer With Transaction",
+		"product_line_per_txn": "Product Line Per Transaction",
+		"socialdata": "Social Data",
+		"member_points": "Member Points (Weekly)",
+		"return_transactions": "Return Transactions"
+	},
+	"report_path": "/backup_script/daily_ftp_report/test_data",
+	"notify_user": true
+}

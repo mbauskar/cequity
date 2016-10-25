@@ -152,6 +152,7 @@ def save_csv_report(report, content, report_date, total_records):
 
 def send_notification_mail(mail_pwd, results):
 	mail_template = ""
+	mail_subject = mail_subject.format("report_date": get_report_date(days=0))
 	report_result_template = ""
 	report_result = ""
 	# get template

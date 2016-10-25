@@ -16,7 +16,7 @@
 		"nikhil.k@indictranstech.com"
 	],
 	"sender": "makarand.b@indictranstech.com",
-	"mail_subject": "[Cequity] Reports created",
+	"mail_subject": "[Cequity] Reports for {report_date} created",
 	"date_format": "%Y-%m-%d",
 	"filename_formats": {
 		"customer": "Customer_{report_date}_{count}.csv",

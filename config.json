@@ -25,7 +25,7 @@
 		"product_line_per_txn": "Product_line_per_transaction_{report_date}_{count}.csv",
 		"socialdata": "socialdata_{report_date}_{count}.csv",
 		"member_points": "member_points_weekly{report_date}_{count}.csv",
-		"return_transactions": "Return_transaction_{report_date}_{count}"
+		"return_transactions": "Return_transaction_{report_date}_{count}.csv"
 	},
 	"daily_reports": [
 		"customer",
